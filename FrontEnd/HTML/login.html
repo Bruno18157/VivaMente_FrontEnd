@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VivaMente | Entrar</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/app.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">VivaMente</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="login.html" id="nav-auth" class="active">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="login-section">
+            <div class="container">
+                <div class="login-card">
+                    <span class="section-label">Área do usuário</span>
+                    <h1 id="login-titulo">Entrar</h1>
+                    <p id="login-subtitulo">Acesse sua conta para acompanhar suas tarefas e conquistas.</p>
+
+                    <div class="login-abas">
+                        <button type="button" class="aba ativa" id="aba-entrar">Entrar</button>
+                        <button type="button" class="aba" id="aba-cadastro">Sou psicólogo(a) — criar conta</button>
+                    </div>
+
+                    <div class="login-tipo" id="grupo-tipo">
+                        <label class="tipo-opcao">
+                            <input type="radio" name="tipo" value="paciente" checked>
+                            <span>Paciente</span>
+                        </label>
+                        <label class="tipo-opcao">
+                            <input type="radio" name="tipo" value="psicologo">
+                            <span>Psicólogo(a)</span>
+                        </label>
+                    </div>
+
+                    <form id="loginForm" novalidate>
+                        <div class="campo" id="campo-nome" hidden>
+                            <label for="login-nome">Nome completo</label>
+                            <input type="text" id="login-nome" placeholder="Digite seu nome">
+                        </div>
+                        <div class="campo">
+                            <label for="login-email">E-mail</label>
+                            <input type="email" id="login-email" placeholder="Digite seu e-mail" required>
+                        </div>
+                        <div class="campo">
+                            <label for="login-senha">Senha</label>
+                            <input type="password" id="login-senha" placeholder="Digite sua senha" required>
+                        </div>
+                        <p class="login-erro" id="login-erro" hidden></p>
+                        <button type="submit" class="btn-login" id="btn-login">Entrar</button>
+                    </form>
+
+                    <p class="login-ajuda" id="login-ajuda">
+                        Pacientes são cadastrados pelo(a) psicólogo(a) responsável. Se ainda não tem acesso, peça o
+                        seu cadastro ao seu profissional.
+                    </p>
+                    <p class="login-ajuda">Dúvidas ou precisa de ajuda? <a href="index.html#contato">Fale conosco</a> — não é preciso estar logado.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h2>VivaMente</h2>
+            <p>Cuidando da sua mente para você viver melhor.</p>
+            <p class="copy">© 2026 Projeto VivaMente | Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../JS/app.js"></script>
+    <script src="../JS/login.js"></script>
+</body>
+
+</html>

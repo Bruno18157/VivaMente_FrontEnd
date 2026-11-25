@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VivaMente | Tarefas</title>
+    <link rel="stylesheet" href="../CSS/tarefas.css">
+    <link rel="stylesheet" href="../CSS/app.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">VivaMente</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="perfil.html">Meu Perfil</a></li>
+                    <li><a href="tarefas.html" class="active">Tarefas</a></li>
+                    <li><a href="recompensas.html">Recompensas</a></li>
+                    <li><a href="consultas.html">Consultas</a></li>
+                    <li><a href="chat.html">Toquinho</a></li>
+                    <li><a href="login.html" id="nav-auth">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="tarefas-section">
+            <div class="container">
+
+                <div class="titulo">
+                    <span class="section-label" id="titulo-label">Meu progresso</span>
+                    <h1 id="titulo-pagina">Minhas Tarefas</h1>
+                    <p id="titulo-descricao">Pequenas atitudes podem fazer uma grande diferença no seu bem-estar.</p>
+                </div>
+
+                <div class="progresso-card">
+                    <div class="progresso-info">
+                        <div>
+                            <span>Progresso</span>
+                            <strong id="progresso-texto">0 de 0 tarefas concluídas</strong>
+                        </div>
+                        <div class="porcentagem" id="porcentagem">0%</div>
+                    </div>
+
+                    <div class="barra">
+                        <div class="barra-progresso" id="barra-progresso"></div>
+                    </div>
+                </div>
+
+                <div class="tarefas-header">
+                    <div>
+                        <span class="section-label" id="lista-label">Hoje</span>
+                        <h2 id="lista-titulo">Cuide de você</h2>
+                    </div>
+                    <div class="tarefas-header-acoes">
+                        <span class="status-tag" data-somente="paciente" hidden>⭐ <span class="pontos-valor">0</span> pontos</span>
+                        <button class="btn-secundario" id="btn-checkin" data-somente="paciente" hidden>Fazer check-in (+10)</button>
+                        <select class="filtro-paciente" id="filtro-paciente" data-somente="psicologo" hidden></select>
+                        <button class="btn-adicionar" id="btn-nova-tarefa" data-somente="psicologo" hidden>+ Nova tarefa</button>
+                    </div>
+                </div>
+
+                <div class="tarefas-grid" id="lista-tarefas"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h2>VivaMente</h2>
+            <p>Cuidando da sua mente para você viver melhor.</p>
+            <p class="copy">© 2026 Projeto VivaMente | Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../JS/app.js"></script>
+    <script src="../JS/tarefas.js"></script>
+</body>
+
+</html>

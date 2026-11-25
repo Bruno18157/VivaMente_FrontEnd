@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VivaMente | Meu Perfil</title>
+    <link rel="stylesheet" href="../CSS/perfil.css">
+    <link rel="stylesheet" href="../CSS/app.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">VivaMente</a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#depoimentos">Depoimentos</a></li>
+                    <li><a href="index.html#contato">Contato</a></li>
+                    <li><a href="perfil.html">Meu Perfil</a></li>
+                    <li><a href="tarefas.html">Tarefas</a></li>
+                    <li><a href="recompensas.html">Recompensas</a></li>
+                    <li><a href="consultas.html">Consultas</a></li>
+                    <li><a href="chat.html">Toquinho</a></li>
+                    <li><a href="login.html" id="nav-auth">Entrar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="perfil">
+            <div class="container">
+                <div class="perfil-header">
+                    <span class="section-label">Minha conta</span>
+                    <h1>Meu Perfil</h1>
+                    <p>Gerencie suas informações pessoais e mantenha seu perfil atualizado.</p>
+                </div>
+                <div class="perfil-card">
+                    <div class="perfil-lateral">
+                        <div class="avatar"><span id="avatar-iniciais">--</span></div>
+                        <h2 id="perfil-nome-lateral">Carregando...</h2>
+                        <p id="perfil-email-lateral"></p>
+                        <p class="pontos-chip" data-somente="paciente">⭐ <span class="pontos-valor">0</span> pontos</p>
+                        <button type="button" class="btn-foto" id="btn-sair">Sair da conta</button>
+                    </div>
+                    <div class="perfil-formulario">
+                        <div class="form-header">
+                            <h2>Informações pessoais</h2>
+                            <p>Atualize seus dados abaixo.</p>
+                        </div>
+                        <form id="perfilForm">
+                            <div class="form-grid">
+                                <div class="campo">
+                                    <label for="nome">Nome completo</label>
+                                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                                </div>
+                                <div class="campo">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="Digite seu e-mail"
+                                        required>
+                                </div>
+                                <div class="campo">
+                                    <label for="tipoConta">Tipo de conta</label>
+                                    <input type="text" id="tipoConta" name="tipoConta" readonly>
+                                </div>
+                                <div class="campo" data-somente="paciente">
+                                    <label for="pontos">Pontos acumulados</label>
+                                    <input type="text" id="pontos" name="pontos" readonly>
+                                </div>
+                                <div class="campo campo-completo" data-somente="paciente">
+                                    <label for="psicologo">Meu psicólogo(a)</label>
+                                    <input type="text" id="psicologo" name="psicologo" readonly>
+                                </div>
+                                <div class="campo" data-somente="psicologo">
+                                    <label for="totalPacientes">Pacientes vinculados</label>
+                                    <input type="text" id="totalPacientes" name="totalPacientes" readonly>
+                                </div>
+                            </div>
+                            <div class="acoes">
+                                <button type="button" class="btn-cancelar" id="cancelar">Cancelar</button>
+                                <button type="submit" class="btn-salvar">Salvar alterações</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="seguranca">
+                    <div>
+                        <span class="icone">🔒</span>
+                        <div>
+                            <h3>Segurança da conta</h3>
+                            <p>Mantenha seus dados protegidos.</p>
+                        </div>
+                    </div>
+                    <button class="btn-senha" id="btn-senha">Alterar senha</button>
+                </div>
+
+                <div class="pacientes-bloco" data-somente="psicologo" hidden>
+                    <div class="pacientes-topo">
+                        <div>
+                            <h3>Meus pacientes</h3>
+                            <p>Cadastre pacientes para atribuir tarefas e agendar consultas.</p>
+                        </div>
+                        <button type="button" class="btn-salvar btn-novo-paciente" id="btn-novo-paciente">+ Novo paciente</button>
+                    </div>
+                    <div class="lista-pacientes" id="lista-pacientes"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <h2>VivaMente</h2>
+            <p>Cuidando da sua mente para você viver melhor.</p>
+            <p class="copy">
+                © 2026 Projeto VivaMente | Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../JS/app.js"></script>
+    <script src="../JS/perfil.js"></script>
+</body>
+
+</html>
