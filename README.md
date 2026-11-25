@@ -1,1 +1,0 @@
-# VivaMente_FrontEnd
